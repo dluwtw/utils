@@ -9,6 +9,11 @@ import urllib2
 
 import httplib
 
+# A utility to delete weights from journal based on excel spreadsheet.
+# The spreadsheet contains UUID's, dates
+# The script gets the weight ID from the identity endpoint and then calls the journal endpoint with UUID, date and weight id to delete the weight.
+# "path" is the path to the spreadsheet where the entries are.
+
 def process( path ):
 
     if os.path.isfile( output_file ):
